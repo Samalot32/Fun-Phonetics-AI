@@ -1,14 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-    <h1>Fun Phonetics</h1>
-    <p>Practice our sounds together</p>
-
-    <div class="lesson-container">
-        <!-- Add your lesson cards here -->
-    </div>
-
-    <button id="start-lesson">Let's Go!</button>
-</div>
+    <h1>Fun Phonetics!</h1>
+    <button id="recordButton">Say the word</button>
+    <button id="stopButton" disabled>Done</button>
+    <p id="result"></p>
 {% endblock %}
