@@ -6,10 +6,6 @@
     <title>Fun Phonetics!</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-    <script src="https://webaudiodemos.appspot.com/AudioRecorder/js/audiodisplay.js"></script>
-    <script src="https://webaudiodemos.appspot.com/AudioRecorder/js/recorderjs/recorder.js"></script>
-    <script src="https://webaudiodemos.appspot.com/AudioRecorder/js/app.js"></script>
-
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -91,6 +87,9 @@
 <body>
     {% block content %}
     {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/recordrtc@5.6.1/RecordRTC.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <!--
     <div id="viz">
         <canvas id="analyser" width="1024" height="500"></canvas>
         <canvas id="wavedisplay" width="1024" height="500"></canvas>
@@ -99,7 +98,7 @@
         <img id="record" src="https://webaudiodemos.appspot.com/AudioRecorder/img/mic128.png" onclick="toggleRecording(this);">
         <a id="save" href="#"><img src="https://webaudiodemos.appspot.com/AudioRecorder/img/save.svg"></a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/recordrtc@5.6.1/RecordRTC.min.js"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  -->    
+
 </body>
 </html>

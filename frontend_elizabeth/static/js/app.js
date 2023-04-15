@@ -1,3 +1,5 @@
+
+
 const recordButton = document.getElementById('recordButton');
 const stopButton = document.getElementById('stopButton');
 const playButton = document.getElementById('playButton');
@@ -27,10 +29,6 @@ let wordList = [
 ];
 let currentWordIndex = 0;
 let currentWord = wordList[currentWordIndex];
-
-export function cardclicked(name){
-  alert("card clicked"+name);
-}
 
 recordButton.addEventListener('click', async () => {
   if (!isRecording) {
@@ -68,8 +66,8 @@ async function stopRecording() {
       playButton.disabled = false;
       const formData = new FormData();
       formData.append('audio', blob);
-      const response = await fetch('/recognize', { method: 'POST', body: formData });
-      const data = await response.json();
+      //const response = await fetch('/recognize', { method: 'POST', body: formData });
+      //const data = await response.json();
       result.textContent = `Recognized letters: ${data.letters}`;
       checkWordPronunciation(data.letters);
     });
@@ -140,6 +138,10 @@ function checkWordPronunciation(letters) {
           <div class="card-back">${card.description}</div>
         `;
         cardContainer.appendChild(cardElement);
+      });
+    }
+  }
+}
       
 //----FOR RESULTS PAGE
 
