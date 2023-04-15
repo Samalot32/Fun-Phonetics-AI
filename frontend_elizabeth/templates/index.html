@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <header>
+        <h1>Fun Phonetics!</h1>
+        <h6>Language: English</h6>
+    </header>
+    <main>
+        <p class="intro">A brand new free, fun, and interactive way to learn and practice phonetics for kids like you!</p>
+        <div id="controls">
+            <a href="/hello">
+                <button id="recordButton">
+
+                    <img class="image" src="/static/images/rocket.png" width="20" height="auto">
+                Activate
+                </button>
+            </a>
+            <!--button id="stopButton" disabled>Done</button-->
+            <!--button id="playButton" disabled>Play it back</button-->
+            <!--button id="nextButton" disabled onclick="loadNextWord()">Next word</button-->
+        </div>
+        
+        
+        <a href="/results">results</a>
+        
+    </main>
+    <footer class="language-inline">
+        <class="spanish">
+            <img class="image" src="/static/images/spain.png" width="20" height="auto">
+            <h6>
+             SPANISH
+            </h6>
+        </class>
+        <class="creole">
+            <img class="image" src="/static/images/haiti 2.png" width="20" height="auto">
+            <h6>
+             CREOLE
+            </h6>
+        </class>
+        <class="portuguese">
+            <img class="image" src="/static/images/brazil.png" width="20" height="auto">
+            <h6>
+             PORTUGUESE
+            </h6>
+        </class>
+    </footer>
+
+    <p id="result"></p>
+</div>
+{% endblock %}
