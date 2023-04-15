@@ -21,7 +21,19 @@ def recognize():
         with sr.AudioFile(converted_audio_file) as source:
             audio = recognizer.record(source)
 
-    # Recognize the letters in the audio using PocketSphinx
+    response = {"success": True, "error": None, "transcription": None}
+
+    try:
+        print("Google Speech Recognition thinks you said " + recognizer.recognize_google(audio))
+        response["transcription"] = recognizer.recognize_google(audio)
+        print("Google Speech Recognition thinks you said " + recognizer.recognize_google(audio))
+    except sr.RequestError:
+        response["success"] = False
+        response["error"] = "API unavailable"
+    except sr.UnknownValueError:
+        response["error"] = "Unable to recognize speech"
+
+    return response
     try:
         letters = recognizer.recognize_sphinx(audio, language="en-US")
     except sr.UnknownValueError:

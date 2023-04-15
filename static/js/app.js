@@ -13,8 +13,8 @@ let correctAttempts = 0;
 let incorrectAttempts = 0;
 let wordList = [
   {
-    imageSrc: "/static/images/cat.png",
-    word: "cat"
+    imageSrc: "/static/images/astronaut.png",
+    word: "astronaut"
   },
   {
     imageSrc: "/static/images/dog.png",
