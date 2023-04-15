@@ -5,6 +5,8 @@ const result = document.getElementById('result');
 const wordImage = document.getElementById('wordImage');
 const wordIndex = document.getElementById('wordIndex');
 
+
+
 let recorder;
 let isRecording = false;
 let correctAttempts = 0;
