@@ -1,7 +1,7 @@
 # Phonics-AI-App
 Welcome to the **Fun Phonetics AI project**! :speech_balloon: :speech_balloon: :speech_balloon: 
 
-This project aims to provide a fun and interactive way for students to improve their **phonetic skills**. The project utilizes *artificial intelligence* technology to identify and provide feedback on an *individual's pronunciation*.
+This project aims to provide a fun and interactive way for students to improve their **phonetic skills**. The project utilizes *artificial intelligence* :robot: technology to identify and provide feedback on an *individual's pronunciation*.
 
 ## Getting Started
 To use Fun Phonetics AI, follow the steps below:
