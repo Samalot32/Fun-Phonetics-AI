@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container">
     <h1>Fun Phonetics!</h1>
-    <button id="recordButton">Say the word</button>
-    <button id="stopButton" disabled>Done</button>
+    <h3>How to say</h3>
+    <div>
+        <img class="image" src="/static/images/cat.png" alt="What is this?" width="200" height="auto">
+    </div>
+
+    <button id="recordButton" onclick="toggleButton()">Try it!</button>
+
     <p id="result"></p>
+</div>
 {% endblock %}
