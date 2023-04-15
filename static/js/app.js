@@ -106,4 +106,57 @@ function checkWordPronunciation(letters) {
       incorrectAttempts = 0;
       correctAttempts = 0;
       currentWordIndex++;
-      if (currentWord
+      if (currentWordIndex >= wordList.length) {
+        currentWordIndex = 0;
+      }
+      const cardContainer = document.querySelector('.card-container');
+
+      // Define an array of objects representing the cards
+      const cards = [
+        { letter: 'A', imageSrc: 'a.jpg', word: 'Apple', description: 'This is a delicious fruit' },
+        { letter: 'B', imageSrc: 'b.jpg', word: 'Ball', description: 'This is a spherical object' },
+        // Add more objects for each letter of the alphabet, with the image source, word, and description
+      ];
+      
+      // Shuffle the cards randomly
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      
+      // Add the cards to the card container
+      cards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.innerHTML = `
+          <img src="${card.imageSrc}" alt="${card.word}">
+          <h2>${card.letter} is for ${card.word}</h2>
+          <div class="card-back">${card.description}</div>
+        `;
+        cardContainer.appendChild(cardElement);
+      
+//----FOR RESULTS PAGE
+
+        const word = 'ASTRONAUT'; // Replace with the word you want to use
+const wordContainer = document.querySelector('#word-container');
+
+// Define an array of objects representing the word letters
+const wordLetters = word.split('').map(letter => ({
+  letter,
+  correct: Math.random() >= 0.5, // Replace with your pronunciation metric for each letter
+}));
+
+// Add the letters to the word container
+wordLetters.forEach(letter => {
+  const letterElement = document.createElement('div');
+  letterElement.classList.add('letter-bubble');
+  letterElement.textContent = letter.letter;
+  if (letter.correct) {
+    letterElement.classList.add('correct');
+    letterElement.textContent += ' ✓';
+  } else {
+    letterElement.classList.add('incorrect');
+    letterElement.textContent += ' ✕';
+  }
+  wordContainer.appendChild(letterElement);
+});

@@ -2,21 +2,31 @@
 
 {% block content %}
 <div class="container">
-    <h1>Fun Phonetics!</h1>
-    <h3>How to say</h3>
-    <div>
-        <img class="image" src="/static/images/cat.png" alt="What is this?" width="200" height="auto">
-    </div>
-
-    <div id="imageContainer">
-        <img id="wordImage" src="">
-      </div>
-      <div id="controls">
-        <button id="recordButton">Try it!</button>
-        <button id="stopButton" disabled>Done</button>
-        <button id="playButton" disabled>Play it back</button>
-        <button id="nextButton" disabled onclick="loadNextWord()">Next word</button>
-      </div>
+    <header>
+        <h1>Fun Phonetics!</h1>
+        <h6>Language: English</h6>
+    </header>
+    <main>
+        <p class="intro">A brand new free, fun, and interactive way to learn and practice phonetics for kids like you!</p>
+        <div id="controls">
+            <button id="recordButton">
+                <img class="image" src="/static/images/ROCKET.png" width="20" height="auto">
+                Activate
+            </button>
+            <!--button id="stopButton" disabled>Done</button-->
+            <!--button id="playButton" disabled>Play it back</button-->
+            <!--button id="nextButton" disabled onclick="loadNextWord()">Next word</button-->
+        </div>
+    </main>
+    <footer>
+        <class="spanish">
+            <img class="image" src="/static/images/SPANISH.png" width="20" height="auto">
+            <h6>
+             SPANISH
+            </h6>
+        </class>
+        
+    </footer>
 
     <p id="result"></p>
 </div>
