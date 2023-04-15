@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<header>
+    <h1>Fun Phonetics!</h1>
+    <h6>Language: English</h6>
+</header>
+<head> 
+    <title>Astronaut</title>
+<style>
+    /* Style for the letter bubbles */
+    .letter-bubble {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #cccccc;
+      color: #ffffff;
+      font-size: 1.2em;
+      font-weight: bold;
+      line-height: 40px;
+    }
+    .letter-bubble.correct {
+      background-color: #00cc00;
+    }
+    .letter-bubble.incorrect {
+      background-color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Word Pronunciation</h1>
+  <div id="word-container"></div>
+  <script src="app.js"></script>
+</body>
+</div>
+{% endblock %}
