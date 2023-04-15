@@ -7,7 +7,7 @@ import time
 
 def recognize_speech_from_mic(recognizer, microphone):
     with microphone as source:
-        print("Please say the letter...")
+        print("Please press record and say the word.")
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source)
 
@@ -68,7 +68,7 @@ def show_results():
     result_label.pack(padx=200, pady=200)
 
 # letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-letters = ['Astronaut', 'Boat']
+letters = ['Astronaut', 'Boat', 'Chili','Dog','Egg','Frisbee','Grape','Hamburger','Ink','Jam','Karate','Ladybug','Moon','Nurse','Octopus','Paper','Queen','Rose','Shark','Tiger','Umbrella','Volcano','Windmill','Xylophone','Yacht','Zebra']
 current_letter = None
 total_attempts = 0
 correct_attempts = 0
@@ -77,7 +77,7 @@ recognizer = sr.Recognizer()
 microphone = sr.Microphone()
 
 root = tk.Tk()
-root.title("Fun Phonetics")
+root.title("Fun Phonetics AI")
 
 letter_label = ttk.Label(root)
 letter_label.pack(pady=20)
