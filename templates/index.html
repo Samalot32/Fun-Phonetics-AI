@@ -8,7 +8,15 @@
         <img class="image" src="/static/images/cat.png" alt="What is this?" width="200" height="auto">
     </div>
 
-    <button id="recordButton" onclick="toggleButton()">Try it!</button>
+    <div id="imageContainer">
+        <img id="wordImage" src="">
+      </div>
+      <div id="controls">
+        <button id="recordButton">Try it!</button>
+        <button id="stopButton" disabled>Done</button>
+        <button id="playButton" disabled>Play it back</button>
+        <button id="nextButton" disabled onclick="loadNextWord()">Next word</button>
+      </div>
 
     <p id="result"></p>
 </div>
